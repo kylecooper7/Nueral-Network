@@ -17,6 +17,13 @@ public class Runner
 			Img image = new Img("test.png");
 			Img a0 = new Img("0.png");
 			printJFrame(a0);
+			try {
+				TimeUnit.SECONDS.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			printJFrame(image);
 			
 //			int[][] data = image.findImg("test.png");
 			
