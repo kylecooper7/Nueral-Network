@@ -1,20 +1,25 @@
 import java.awt.Canvas;
 import java.awt.Graphics;
-import javax.swing.JFrame;
+import javax.swing.*;
 public class Drawing extends Canvas
 	{
-
-		public static void main(String[] args)
-			{
-				JFrame frame = new JFrame("My Drawing");
-				Canvas canvas = new Drawing();
-				canvas.setSize(400, 400);
-				frame.add(canvas);
-				frame.pack();
-				frame.setVisible(true);
-			}
+		protected boolean[][] pixeys;
+		public Drawing(boolean[][] pixels) {
+			pixeys = pixels;
+		}
+		
 		public void paint(Graphics g) {
-			g.fillRect(50,  100,  100,  100);
+			for(int i = 0; i < pixeys.length; i++) {
+				for(int j = 0; j < pixeys[i].length; j++) {
+					if(pixeys[i][j]) {
+						g.fillRect(10 * j,10 * i, 10, 10);
+						
+					}
+				}
+			}
+				
+			
+			
 		}
 
 	}
