@@ -16,6 +16,7 @@ public class Runner
 			{
 			Img image = new Img("test.png");
 			Img a0 = new Img("0.png");
+			Img a6 = new Img("a6.png");
 			printJFrame(a0);
 			try {
 				TimeUnit.SECONDS.sleep(1);
@@ -23,7 +24,7 @@ public class Runner
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			printJFrame(image);
+			printJFrame(a6);
 			
 //			int[][] data = image.findImg("test.png");
 			
