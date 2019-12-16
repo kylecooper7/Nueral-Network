@@ -13,6 +13,7 @@ public class Drawing extends Canvas
 				for(int j = 0; j < pixeys[i].length; j++) {
 					if(pixeys[i][j]) {
 						g.fillRect(10 * j,10 * i, 10, 10);
+						//jakjasjbd
 						
 					}
 				}
