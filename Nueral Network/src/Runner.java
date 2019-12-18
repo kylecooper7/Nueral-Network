@@ -29,12 +29,12 @@ public class Runner
 				System.out.println(i.getTheLabel());
 			}
 			
-OutputNeuron theOutput = new OutputNeuron();
-		
-			theOutput.setValue(2.4);
-System.out.println(theOutput.getValue());
-theOutput.setTheValue();
-System.out.println(theOutput.getValue());
+//OutputNeuron theOutput = new OutputNeuron();
+//		
+//			theOutput.setValue(2.4);
+//System.out.println(theOutput.getValue());
+//theOutput.setTheValue();
+//System.out.println(theOutput.getValue());
 
 			
 	
