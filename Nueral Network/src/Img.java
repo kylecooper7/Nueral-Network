@@ -2,6 +2,9 @@ import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
@@ -10,11 +13,14 @@ import javax.swing.JFrame;
 
 public class Img extends JFrame{
 protected String imageName;
-	public Img(String imgNam) {
+protected int digitLabel;
+	public Img(String imgNam, int digLabel) {
 	imageName = imgNam;
+	digitLabel = digLabel;
 }
 int[][] findImg() {
 	URL url = getClass().getResource("/resources/" + imageName);
+	
 	try {
 		BufferedImage image = ImageIO.read(url);
 		return convertTo2DWithoutUsingGetRGB(image);
@@ -30,6 +36,18 @@ int[][] findImg() {
 		e.printStackTrace();
 	}
 	return null;
+}
+public String getImageName() {
+	return imageName;
+}
+public void setImageName(String imageName) {
+	this.imageName = imageName;
+}
+public int getDigitLabel() {
+	return digitLabel;
+}
+public void setDigitLabel(int digitLabel) {
+	this.digitLabel = digitLabel;
 }
 public static int[][] convertTo2DWithoutUsingGetRGB(BufferedImage image) {
 
@@ -73,4 +91,6 @@ public static int[][] convertTo2DWithoutUsingGetRGB(BufferedImage image) {
 
     return result;
  }
+
+
 }
