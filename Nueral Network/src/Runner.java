@@ -16,11 +16,21 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 public class Runner
 	{
-	static int counter = 0;
+
 
 		public static void main(String[] args)
 			{
+
+
+      
+      
+      
+      
 			
+
+  
+			
+
 			
 //			Img thepic = new Img("a6.png", 1);
 //			printJFrame(thepic, 10);
@@ -45,14 +55,14 @@ public class Runner
 			return (1/(1 + Math.pow(Math.E, -d)));
 		}
 		
-		public static double[] sigmoid(Double[][] weights, Double[] values, Double[] bias) {
-			double[] results = new double[bias.length];
+		public static double[] sigmoidLayer(Double[][] weights, Double[] previousLayerValues, Double[] biasses) {
+			double[] results = new double[biasses.length];
 			for(int i = 0; i < weights.length; i++) {
 				Double d = 0.0;
 				for(int j = 0; j < weights[i].length; j++) {
-					d+= weights[i][j] * values[j];
+					d+= weights[i][j] * previousLayerValues[j];
 				}
-				d+= bias[i];
+				d+= biasses[i];
 				results[i] = sigmoid(d);
 			}
 			return results;
